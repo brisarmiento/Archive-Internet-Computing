@@ -1,0 +1,47 @@
+<!Doctype html>
+<html lang = "en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE-edge">
+	<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+	<title>Example 3 Nested Lists</title>
+	<style>
+		ul.a {list-style-type: decimal;}
+		ul.b {list-style-type: lower-roman;}
+		ul.c {list-style-type: upper-roman;}
+		ul.d {list-style-type: lower-alpha;}
+		ul.e {list-style-type: upper-alpha;} 
+	</style>
+</head>
+<body>
+	<h1 style="color:blue;">Aircraft Types</h1>
+	<ul>
+		<li>General Aviation (piston-driven engines)</li>
+		<ul class="a">
+			<li>Single-Engine Aircraft</li>
+			<ul class="b">
+				<li>Tail wheel</li>
+				<li>Tricycle</li>
+			</ul>
+			<br><li>Dual-Engine Aircraft</li>
+			<ul class="c">
+				<li>Wing-mounted engines</li>
+				<li>Push-pull fuselage-mounted engines</li>
+			</ul>
+		</ul>
+		<br><li>Commercial Aviation (jet engines)</li>
+		<ul class="a">
+			<li>Dual-Engine</li>
+			<ul class="d">
+				<li>Wing-mounted engines</li>
+				<li>Fuselage-mounted engines</li>
+			</ul>
+			<br><li>Tri-Engine</li>
+			<ul class="e">
+				<li>Third engine in vertical stabilizer</li>
+				<li>Third engine in fuselage</li>
+			<ul>
+		</ul>
+	</ul>
+</body>
+</html>

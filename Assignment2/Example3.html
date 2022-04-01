@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example 3</title>
+</head>
+<body>
+    <style>
+		form  { display: table;      }
+		p     { display: table-row;  }
+		label { display: table-cell; }
+		input { display: table-cell; } 
+
+        .int:hover{
+            background: yellow;
+            color: blue;
+            font-size: 25px;
+        }
+        .int:focus{
+            background: cyan; 
+            color: red;
+            font-size: 25px;
+        }
+    </style>
+    <form>
+            <p>
+                <label>Last Name:</label>
+                <input type="text" id="lastname" class="int" required/>
+            </p>
+            <p>
+                <label>First Name:</label>
+                <input type="text" id="firstname" class="int" required/>
+            </p>
+            <p>
+                <label>E-mail Address:</label>
+                <input type="password" id="email" class="int" required/>
+            </p>
+        
+        <div>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Clear">
+        </div>
+    </form>
+</body>
+</html>

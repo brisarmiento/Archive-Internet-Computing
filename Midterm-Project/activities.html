@@ -1,0 +1,154 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities</title>
+</head>
+
+<body>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+
+        #navul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #navlinks {
+            float: left;
+            margin: 5px;
+            text-decoration: underline;
+        }
+
+        img {
+            width: 400px;
+            height: 300px;
+        }
+
+        img:hover {
+            width: 600px;
+            width: 500px;
+        }
+
+        #hidden-table {
+            display: none;
+        }
+
+        @media screen and (max-width:819px) {
+            #hidden-table {
+                display: block;
+                border: none;
+            }
+
+            #shown-table {
+                display: none;
+            }
+        }
+    </style>
+
+    <h1>Atlantic Trails Resort</h1>
+
+    <nav>
+        <strong>
+            <ul id="navul">
+                <a href="./index.html">
+                    <li id="navlinks">Home</li>
+                </a>
+                <a href="./yurts.html">
+                    <li id="navlinks">Yurts</li>
+                </a>
+                <a href="./activities.html">
+                    <li id="navlinks">Activities</li>
+                </a>
+                <a href="./reservations.html">
+                    <li id="navlinks">Reservations</li>
+                </a>
+            </ul>
+        </strong>
+    </nav>
+
+    <h2>Activities at Atlantic Trails</h2>
+
+    <table id="shown-table">
+        <tr>
+            <td>Waterpark - $10</td>
+            <td>Beach - Free</td>
+        </tr>
+        <tr>
+            <td>
+                <img src="./img/asbury2.png" alt="">
+            </td>
+            <td>
+                <img src="./img/asbury3.png" alt="">
+            </td>
+        </tr>
+        <tr>
+            <td>Shopping - $50</td>
+            <td>Food - $25</td>
+        </tr>
+        <tr>
+            <td>
+                <img src="./img/asbury6.png" alt="">
+            </td>
+            <td>
+                <img src="./img/asbury5.png" alt="">
+            </td>
+        </tr>
+    </table>
+
+    <table id="hidden-table">
+
+        <tr>
+            <td>Waterpark - $10</td>
+        </tr>
+        <tr>
+            <td>
+                <img src="./img/asbury2.png" alt="">
+            </td>
+        </tr>
+        <tr>
+            <td>Beach - Free</td>
+        </tr>
+        <tr>
+            <td>
+                <img src="./img/asbury3.png" alt="">
+            </td>
+        </tr>
+        <tr>
+            <td>Shopping - $50</td>
+        </tr>
+        <tr>
+            <td>
+                <img src="./img/asbury6.png" alt="">
+            </td>
+        </tr>
+        <tr>
+            <td>Food - $25</td>
+        </tr>
+        <tr>
+            <td>
+                <img src="./img/asbury5.png" alt="">
+            </td>
+        </tr>
+
+    </table>
+
+    <footer>
+        <p>
+            <i>Copyright &copy 2022 Atlantic Trails Resort</i> <br />
+            <a href="">Mauro.Mark@mail.montclair.edu</a> <br />
+            <a href="">Sarmiento.Brianna@mail.montclair.edu</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>

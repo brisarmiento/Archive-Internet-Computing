@@ -1,0 +1,45 @@
+<!Doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE-edge">
+	<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+	<title>Example 1</title>
+
+	<style>
+		tr {
+			text-align: center;
+			font-weight: bold;
+		}
+	</style>
+
+</head>
+<script>
+	while (1) {
+		var num1 = prompt("Enter a number between 1 and 20:");
+		var num2 = prompt("Enter a number between 1 and 20:");
+		var num2 = parseInt(num2);
+		var num1 = parseInt(num1);
+		if (num1 >= num2 || num1 > 20 || num2 > 20) {
+			continue;
+		}
+		else {
+			var y = 0;
+			// TODO: need to format table
+			document.write('<table border="2" cellspacing="1" align="center"><col width="150"><col width="150"><col width="150">');
+			document.write("<tr><td>number</td><td>squre</td><td>cube</td></tr>");
+			for (y = num1; y <= num2; y++) {
+				document.write("<tr><td>" + y + "</td><td>" + y * y + "</td><td>" + y * y * y + "</td></tr>");
+			}
+			document.write("</table>");
+			break;
+		}
+	}
+</script>
+
+<body>
+
+</body>
+
+</html>

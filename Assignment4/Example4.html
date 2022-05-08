@@ -1,0 +1,36 @@
+<!Doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE-edge">
+	<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+	<title>Example 4</title>
+</head>
+<script>
+	function getTime() {
+		setInterval(generateTime, 100)
+	}
+
+	function generateTime() {
+
+		let clock = document.getElementById('time')
+		const date = new Date();
+
+		let hh = (date.getHours() < 10) ? '0' + date.getHours() : date.getHours();
+		let mn = (date.getMinutes() < 10) ? '0' + date.getMinutes() : date.getMinutes();
+		let ss = (date.getSeconds() < 10) ? '0' + date.getSeconds() : date.getSeconds();
+		let ml = parseInt(date.getMilliseconds() / 10);
+		let ms = (ml < 10) ? '0' + ml : ml;
+
+		clock.innerHTML = hh + ':' + mn + ':' + ss + ':' + ms;
+	}
+</script>
+
+<body>
+	<input type="button" value="Let It Show" onclick="getTime()">
+	<br>
+	<span id="time"></span>
+</body>
+
+</html>

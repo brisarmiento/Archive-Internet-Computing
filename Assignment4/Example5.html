@@ -7,6 +7,38 @@
 	<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
 	<title>Example 5</title>
 </head>
+<img src="cyan.png" alt="left" id="image" width="300px" height="350px" style="position: absolute;">
+<script>
+	var iconImg;
+	var pictures = ["cyan", "green", "red", "yellow"];
+	var alt = ["cyan", "green", "red", "yellow"];
+
+	function pickImage() {
+		var index = Math.floor(Math.random() * 4);
+		iconImg.setAttribute("src", pictures[index] + ".png");
+		iconImg.setAttribute("alt", alt[index]);
+		console.log(index);
+		randomPosition();
+	}
+
+	function randomPosition() {
+		iconImg = document.getElementById("image");
+		document.getElementById('image').style.top = "0px";
+		iconImg.addEventListener("mouseenter", pickImage, false);
+
+		let randomX = Math.floor(1 + Math.random() * 200);
+		let randomY = Math.floor(1 + Math.random() * 200);
+
+		document.getElementById('image').style.top = "" + randomX + "px";
+		document.getElementById('image').style.left = "" + randomY + "px";
+	}
+
+	function start() {
+		iconImg = document.getElementById("image");
+		iconImg.addEventListener("mouseenter", pickImage, false);
+	}
+	window.addEventListener("load", start, false);
+</script>
 
 <body>
 

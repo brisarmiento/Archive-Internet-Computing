@@ -7,12 +7,19 @@
 	<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
 	<title>Example 1</title>
 
-	<style>
-		tr {
-			text-align: center;
-			font-weight: bold;
-		}
-	</style>
+    <style>
+        table {
+            width: 600px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
 
 </head>
 <script>
@@ -27,8 +34,8 @@
 		else {
 			var y = 0;
 			// TODO: need to format table
-			document.write('<table border="2" cellspacing="1" align="center"><col width="150"><col width="150"><col width="150">');
-			document.write("<tr><td>number</td><td>squre</td><td>cube</td></tr>");
+			document.write('<table border="2" cellspacing="1" align="center">');
+			document.write("<tr><th>number</th><th>squre</th><th>cube</th></tr>");
 			for (y = num1; y <= num2; y++) {
 				document.write("<tr><td>" + y + "</td><td>" + y * y + "</td><td>" + y * y * y + "</td></tr>");
 			}

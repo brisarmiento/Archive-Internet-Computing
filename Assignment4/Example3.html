@@ -6,7 +6,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
     <title>Example 3</title>
+
+    <style type="text/css">
+        table {
+            width: 300px;
+            border-collapse: collapse;
+            background-color: white;
+        }
+
+        table,
+        td,
+        th {
+            border: 1px solid black;
+            padding: 4px;
+        }
+
+        th {
+            text-align: left;
+            color: white;
+            background-color: darkblue;
+        }
+
+        tr.yellow {
+            background-color: yellow;
+        }
+
+        tr.lightblue {
+            background-color: lightblue;
+        }
+    </style>
 </head>
+<script>
+    var amount; 
+    var principal = prompt("Please enter the principal amount"); 
+    var rate = prompt("Please enter the percentage of interest rate");
+    rate = rate / 100; 
+
+    document.writeln("<table>"); 
+    document.writeln(
+        "<caption>Calculating Compound Interest</caption>");
+    document.writeln(
+        "<thead><tr><th>Year</th>");
+    document.writeln(
+        "<th>Amount on deposit</th>"); 
+    document.writeln("</tr></thead><tbody>");
+
+    for (var year = 1; year <= 10; ++year) {
+        amount = principal * Math.pow(1.0 + rate, year);
+        if (year == 1 || year == 4 || year == 7 || year == 10) {
+            document.writeln("<tr class='yellow'><td>" + year +
+                "</td><td>" + amount.toFixed(2) + "</td></tr>");
+        } else if (year == 2 || year == 5 || year == 8) {
+            document.writeln("<tr class='lightblue'><td>" + year +
+                "</td><td>" + amount.toFixed(2) + "</td></tr>");
+        }
+        else
+            document.writeln("<tr><td>" + year +
+                "</td><td>" + amount.toFixed(2) + "</td></tr>");
+    }
+
+    document.writeln("</tbody></table>");
+</script>
 
 <body>
 
